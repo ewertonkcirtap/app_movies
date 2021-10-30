@@ -53,7 +53,7 @@ if filtro1 and filtro2:
     bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download",convert_excel(df1))#Baixar em Excel
     st.write('')
-    st.dataframe(df1.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
+    st.table(df1.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
     if bt:
         st.success('Arquivo baixado com sucesso!')
 
@@ -65,7 +65,7 @@ elif filtro2:
     bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download", convert_excel(df2))#Baixar em Excel
     st.write('')
-    st.dataframe(df2.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
+    st.table(df2.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
     if bt:
         st.success('Arquivo baixado com sucesso!')
 
@@ -77,7 +77,7 @@ elif filtro1:
     bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download",convert_excel(df3))#Baixar em Excel
     st.write('')
-    st.dataframe(df3.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
+    st.table(df3.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
     if bt:
         st.success('Arquivo baixado com sucesso!')
 

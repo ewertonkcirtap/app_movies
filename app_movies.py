@@ -91,5 +91,5 @@ else:
     st.text_input('Insira seu e-mail')
     st.write('\n')
     st.write("""### Como você conheceu o recomendador ?:""")
-    st.radio('', options=['Site','Instagram', 'Outros'])
+    st.radio('', options=['Site','Instagram', 'Outros','teste'])
 

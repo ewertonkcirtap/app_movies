@@ -14,15 +14,16 @@ df_pais = df["Pais"].drop_duplicates()
 st.set_page_config(
     page_title="movies",
     page_icon=":film_projector:",
-    #layout="wide",
+    layout="centered",
     initial_sidebar_state="auto",
 )
 
 
 #Layout Inicial
-st.sidebar.write("""# Menu""")
+st.sidebar.text("""@ewertonkcirtap""")
 st.sidebar.write('\n')
-st.sidebar.write("""## Que tal aplicar alguns filtros ? para exibir alguns filmes para você! :smile:""")
+st.sidebar.write('\n')
+st.sidebar.write("""## Que tal aplicar alguns filtros ? para exibir alguns filmes para você :smile:""")
 st.sidebar.write('\n')
 
 ### Definindo Filtros - Selecao Multipla
@@ -30,11 +31,11 @@ filtro1 = st.sidebar.multiselect("# País", df_pais.sort_values())
 filtro2 = st.sidebar.multiselect("# Avaliação", ["Excelente", "Muito bom", "Bom"])
 st.sidebar.write('\n')
 st.sidebar.write('\n')
+st.sidebar.write('\n')
 
 ### Buscar por filme - IMDB
-st.sidebar.write("""### Você pode pesquisar por qualquer filme aqui""")
+st.sidebar.write("""## Você pode pesquisar por qualquer filme aqui :mag_right:""")
 filme = st.sidebar.text_input('Insira o nome do filme')
-
 
 #Multiplas Condições - # Usar .isin(passar as condições) - Construindo DataFrame
 df1 = df[df['Pais'].isin(filtro1) & df['Avaliacao'].isin(filtro2)]
@@ -107,18 +108,32 @@ elif filme:
 
         info = "https://www.imdb.com/title/" + id
 
-        col2, col3 = st.columns(2)
-        #col1.metric("Filme", nomefilme)
-        col2.metric("Nota Imdb", nota)
-        col3.metric("Ano", anofilme)
-
+        st.image(filme['d'][0]['i']['imageUrl'])
         st.write('\n')
-        st.write('\n')
-        st.image(filme['d'][0]['i']['imageUrl'], caption= nomefilme)
+        st.write("Filme: " + str(nomefilme))
+        st.write("Nota Imdb: " + str(nota))
+        st.write("Ano: " + str (anofilme))
         st.write(f"Mais informações : [Saiba mais]({info})")
 
 ### Layout Tela Inicial
 else:
     st.write('\n')
-    st.write("""# Filmes Recomendados :film_projector:""")  # Titulo App
+    st.write("""### Vou te recomendar alguns filmes de acordo com a minha avaliação :film_projector:""")  # Titulo App
+    st.write('\n')
     st.image('https://i2.wp.com/geekiegames.geekie.com.br/blog/wp-content/uploads/2018/07/gosto-filmes-profissao-1.png?fit=1097%2C630&')
+    st.write('\n')
+    st.write('\n')
+    st.write('\n')
+    st.write('\n')
+    check = st.multiselect("Como você conheceu essa aplicação ? ", ["Instagram","Linkedin","Google","Outros"])
+
+    if check:
+        with st.form("my_form"):
+            st.write("Para registrar seu voto vou precisar que preencha os dados abaixo, tudo bem ?")
+            nome =  st.text_input("Nome")
+            email = st.text_input("E-mail")
+            submitted = st.form_submit_button("Confirmar")
+
+        if submitted:
+            sucesso = st.success("Obrigado!")
+            check = st.empty()

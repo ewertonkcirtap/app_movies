@@ -14,7 +14,7 @@ st.set_page_config(
 
 link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdcvSTtG8KKphzQ3h4i2Lyp8Osh0FLTqs59Sf4zhtSea9lmX7xm9-A1HPgsFnf77HabNfRwcyhEljU/pub?gid=0&single=true&output=csv"
 
-@st.cache
+#@st.cache
 def load_df():
     df = pd.read_csv(link).drop(columns='Nota',axis=1)#Excluindo Coluna Nota
     return df

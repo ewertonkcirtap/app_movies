@@ -78,7 +78,7 @@ elif filtro1:
     #st.download_button("Press to Download",convert_excel(df3))#Baixar em Excel
     st.write('')
     #st.dataframe(df3.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
-    st.table(df3, width=2800, height=400)
+    st.table(df3)
     if bt:
         st.success('Arquivo baixado com sucesso!')
 

@@ -118,7 +118,7 @@ elif filme:
 ### Layout Tela Inicial
 else:
     st.write('\n')
-    st.write("""### Vou te recomendar alguns filmes de acordo com a minha avaliação :film_projector:""")  # Titulo App
+    st.write("""### Vou te recomendar alguns filmes :film_projector:""")  # Titulo App
     st.write('\n')
     st.image('https://i2.wp.com/geekiegames.geekie.com.br/blog/wp-content/uploads/2018/07/gosto-filmes-profissao-1.png?fit=1097%2C630&')
     st.write('\n')

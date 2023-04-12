@@ -30,7 +30,7 @@ st.sidebar.write('\n')
 
 #filtro2 = st.sidebar.multiselect("# Avaliação", ["Excelente", "Muito bom", "Bom"]) - removido na atualiação 12.04
 filtro1 = st.sidebar.multiselect("# Selecione o país", df_pais.sort_values())
-filtro2 = st.sidebar.slider("# Selecione o IMDb Rating",0.0, 10.0)
+filtro2 = st.sidebar.slider("# Selecione o IMDb Rating >= ",0.0, 10.0)
 
 st.sidebar.write('\n')
 st.sidebar.write('\n')
@@ -70,36 +70,50 @@ def rating(x,url="https://imdb8.p.rapidapi.com/title/get-ratings"):
 if filtro1 and filtro2 and filme =="":
     csv = convert_df(df1)
     st.write('')
-    st.write("### *Dá um olhada nos filmes que filtrei para você* :sunglasses:")
+    st.write(f"### *Dá um olhada nos {len(df1)} filmes que filtrei para você* :sunglasses:")
     bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download",convert_excel(df1))#Baixar em Excel
     st.write('')
     #st.dataframe(df1.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
-    st.table(df1.sort_values(by=['IMDb Rating'],ascending=False).reset_index(drop=True))
+    #st.table(df1.sort_values(by=['IMDb Rating'],ascending=False).reset_index(drop=True))
+    
+    df1 = df1.sort_values(by=['IMDb Rating'], ascending=False).reset_index(drop=True)
+    df1.index = df1.index+1
+    st.table(df1)
+    
     if bt:
         st.success('Arquivo baixado com sucesso!')
 
 elif filtro2 and filme =="":
     csv = convert_df(df2)
     st.write('')
-    st.write("### *Dá um olhada nos filmes que filtrei para você* :sunglasses:")
+    st.write(f"### *Dá um olhada nos {len(df2)} filmes que filtrei para você* :sunglasses:")
     bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download", convert_excel(df2))#Baixar em Excel
     st.write('')
     #st.dataframe(df2.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
-    st.table(df2.sort_values(by=['IMDb Rating'],ascending=False).reset_index(drop=True))
+    #st.table(df2.sort_values(by=['IMDb Rating'],ascending=False).reset_index(drop=True))
+    df2 = df2.sort_values(by=['IMDb Rating'], ascending=False).reset_index(drop=True)
+    df2.index = df2.index+1
+    st.table(df2)
+    
     if bt:
         st.success('Arquivo baixado com sucesso!')
 
 elif filtro1 and filme =="":
     csv = convert_df(df3)
     st.write('')
-    st.write("### *Dá um olhada nos filmes que filtrei para você* :sunglasses:")
+    st.write(f"### *Dá um olhada nos {len(df3)} filmes que filtrei para você* :sunglasses:")
     bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download",convert_excel(df3))#Baixar em Excel
     st.write('')
     #st.dataframe(df3.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
-    st.table(df3.sort_values(by=['IMDb Rating'],ascending=False).reset_index(drop=True))
+    #st.table(df3.sort_values(by=['IMDb Rating'],ascending=False).reset_index(drop=True))
+    
+    df3 = df3.sort_values(by=['IMDb Rating'], ascending=False).reset_index(drop=True)
+    df3.index = df3.index+1
+    st.table(df3)
+    
     if bt:
         st.success('Arquivo baixado com sucesso!')
 

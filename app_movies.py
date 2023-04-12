@@ -23,7 +23,7 @@ st.set_page_config(
 st.sidebar.text("""@ewertonkcirtap""")
 st.sidebar.write('\n')
 st.sidebar.write('\n')
-st.sidebar.write("""## Que tal aplicar alguns filtros ? para exibir alguns filmes para você :smile:""")
+st.sidebar.write("""## Que tal aplicar alguns filtros para sugerir filmes à você :smile:""")
 st.sidebar.write('\n')
 
 ### Definindo Filtros - Selecao Multipla
@@ -70,7 +70,7 @@ def rating(x,url="https://imdb8.p.rapidapi.com/title/get-ratings"):
 if filtro1 and filtro2 and filme =="":
     csv = convert_df(df1)
     st.write('')
-    st.write("### *Show, dá um olhada nos filmes que filtrei para você* :sunglasses:")
+    st.write("### *Dá um olhada nos filmes que filtrei para você* :sunglasses:")
     bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download",convert_excel(df1))#Baixar em Excel
     st.write('')
@@ -82,7 +82,7 @@ if filtro1 and filtro2 and filme =="":
 elif filtro2 and filme =="":
     csv = convert_df(df2)
     st.write('')
-    st.write("### *Show, dá um olhada nos filmes que filtrei para você* :sunglasses:")
+    st.write("### *Dá um olhada nos filmes que filtrei para você* :sunglasses:")
     bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download", convert_excel(df2))#Baixar em Excel
     st.write('')
@@ -94,7 +94,7 @@ elif filtro2 and filme =="":
 elif filtro1 and filme =="":
     csv = convert_df(df3)
     st.write('')
-    st.write("### *Show, dá um olhada nos filmes que filtrei para você* :sunglasses:")
+    st.write("### *Dá um olhada nos filmes que filtrei para você* :sunglasses:")
     bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download",convert_excel(df3))#Baixar em Excel
     st.write('')

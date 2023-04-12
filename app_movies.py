@@ -7,7 +7,7 @@ import requests
 
 #Extraindo DF
 link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdcvSTtG8KKphzQ3h4i2Lyp8Osh0FLTqs59Sf4zhtSea9lmX7xm9-A1HPgsFnf77HabNfRwcyhEljU/pub?gid=0&single=true&output=csv"
-df = pd.read_csv(link).drop(columns=['Nota','Avaliacao'],axis=1)#Excluindo Coluna Nota
+df = pd.read_csv(link).drop(columns=['Nota','Avaliacao'],axis=1)#Excluindo Colunas
 df_pais = df["Pais"].drop_duplicates()
 
 #Definindo Configurações da Página
@@ -127,7 +127,7 @@ else:
     st.write('\n')
     st.write("""### Vou te recomendar alguns filmes :film_projector:""")  # Titulo App
     st.write('\n')
-    st.image('https://pipocanamadrugada.com.br/site/wp-content/uploads/2016/09/melhores-filmes_pipoca-na-madrugada-.jpg')
+    st.image('https://pipocanamadrugada.com.br/site/wp-content/uploads/2016/09/melhores-filmes_pipoca-na-madrugada-.jpg')#Foto de capa
     st.write('\n')
     st.write('\n')
     st.write('\n')

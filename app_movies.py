@@ -7,7 +7,7 @@ import requests
 
 #Extraindo DF
 link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdcvSTtG8KKphzQ3h4i2Lyp8Osh0FLTqs59Sf4zhtSea9lmX7xm9-A1HPgsFnf77HabNfRwcyhEljU/pub?gid=0&single=true&output=csv"
-df = pd.read_csv(link).drop(columns='Nota',axis=1)#Excluindo Coluna Nota
+df = pd.read_csv(link).drop(columns=['Nota','Avaliacao'],axis=1)#Excluindo Coluna Nota
 df_pais = df["Pais"].drop_duplicates()
 
 #Definindo Configurações da Página
@@ -27,8 +27,11 @@ st.sidebar.write("""## Que tal aplicar alguns filtros ? para exibir alguns filme
 st.sidebar.write('\n')
 
 ### Definindo Filtros - Selecao Multipla
+
+#filtro2 = st.sidebar.multiselect("# Avaliação", ["Excelente", "Muito bom", "Bom"]) - removido na atualiação 12.04
 filtro1 = st.sidebar.multiselect("# País", df_pais.sort_values())
-filtro2 = st.sidebar.multiselect("# Avaliação", ["Excelente", "Muito bom", "Bom"])
+filtro2 = st.sidebar.slider("IMDb Rating",0.0, 10.0)
+
 st.sidebar.write('\n')
 st.sidebar.write('\n')
 st.sidebar.write('\n')
@@ -38,8 +41,12 @@ st.sidebar.write("""## Você pode pesquisar por qualquer filme aqui :mag_right:"
 filme = st.sidebar.text_input('Insira o nome do filme')
 
 #Multiplas Condições - # Usar .isin(passar as condições) - Construindo DataFrame
-df1 = df[df['Pais'].isin(filtro1) & df['Avaliacao'].isin(filtro2)]
-df2 = df[df['Avaliacao'].isin(filtro2)]#Condição de Multi - Filtro 2 - Avaliacao
+
+#df1 = df[df['Pais'].isin(filtro1) & df['Avaliacao'].isin(filtro2)] - removido na atualiação 12.04
+#df2 = df[df['Avaliacao'].isin(filtro2)]#Condição de Multi - Filtro 2 - removido na atualiação 12.04
+
+df1 = (df[(df['IMDb Rating']>=filtro2)  & df['Pais'].isin(filtro1)])
+df2 = df[df['IMDb Rating']>=(filtro2)]#Condição de Multi - Filtro 2 - Imdb Rating
 df3 = df[df['Pais'].isin(filtro1)]#Condição de Multi - Filtro 3 - Pais
 
 #Função para Baixar Arquivo

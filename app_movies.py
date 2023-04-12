@@ -31,9 +31,8 @@ st.sidebar.write('\n')
 
 #filtro2 = st.sidebar.multiselect("# Avaliação", ["Excelente", "Muito bom", "Bom"]) - removido na atualiação 12.04
 filtro1 = st.sidebar.multiselect("# Selecione o país", df_pais.sort_values())
-filtro1 = st.sidebar.multiselect("# Selecione o Genero", df_genero.sort_values())
-
 filtro2 = st.sidebar.slider("# Mínimo IMDb Rating ",0.0, 10.0)
+#filtro3 = st.sidebar.multiselect("# Selecione o Genero", df_genero.sort_values())# Genero
 
 st.sidebar.write('\n')
 st.sidebar.write('\n')

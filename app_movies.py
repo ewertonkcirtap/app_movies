@@ -120,7 +120,7 @@ else:
     st.write('\n')
     st.write("""### Vou te recomendar alguns filmes :film_projector:""")  # Titulo App
     st.write('\n')
-    st.image('https://i2.wp.com/geekiegames.geekie.com.br/blog/wp-content/uploads/2018/07/gosto-filmes-profissao-1.png?fit=1097%2C630&')
+    st.image('https://pipocanamadrugada.com.br/site/wp-content/uploads/2016/09/melhores-filmes_pipoca-na-madrugada-.jpg')
     st.write('\n')
     st.write('\n')
     st.write('\n')

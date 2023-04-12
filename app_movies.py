@@ -15,7 +15,7 @@ st.set_page_config(
     page_title="movies",
     page_icon=":film_projector:",
     layout="centered",
-    initial_sidebar_state="auto",
+    initial_sidebar_state="expanded",
 )
 
 

@@ -7,9 +7,9 @@ import requests
 
 #Extraindo DF
 link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdcvSTtG8KKphzQ3h4i2Lyp8Osh0FLTqs59Sf4zhtSea9lmX7xm9-A1HPgsFnf77HabNfRwcyhEljU/pub?gid=0&single=true&output=csv"
-df = pd.read_csv(link).drop(columns=['Nota','Avaliacao'],axis=1)#Excluindo Colunas
+df = pd.read_csv(link).drop(columns=['Nota','Avaliacao','Genero'],axis=1)#Excluindo Colunas
 df_pais = df["Pais"].drop_duplicates()
-df_genero = df["Genero"].drop_duplicates()
+#df_genero = df["Genero"].drop_duplicates()
 
 #Definindo Configurações da Página
 st.set_page_config(

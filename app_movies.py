@@ -29,8 +29,8 @@ st.sidebar.write('\n')
 ### Definindo Filtros - Selecao Multipla
 
 #filtro2 = st.sidebar.multiselect("# Avaliação", ["Excelente", "Muito bom", "Bom"]) - removido na atualiação 12.04
-filtro1 = st.sidebar.multiselect("# País", df_pais.sort_values())
-filtro2 = st.sidebar.slider("IMDb Rating",0.0, 10.0)
+filtro1 = st.sidebar.multiselect("# Selecione o país", df_pais.sort_values())
+filtro2 = st.sidebar.slider("# Selecione o IMDb Rating",0.0, 10.0)
 
 st.sidebar.write('\n')
 st.sidebar.write('\n')

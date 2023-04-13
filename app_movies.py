@@ -28,7 +28,7 @@ st.set_page_config(
 st.sidebar.text("""@ewertonkcirtap""")
 st.sidebar.write('\n')
 st.sidebar.write('\n')
-st.sidebar.write("""## Que tal aplicar alguns filtros para sugerir filmes à você :smile:""")
+st.sidebar.write("""## Que tal aplicar alguns filtros para sugerir filmes à você.""")
 st.sidebar.write('\n')
 
 ### Definindo Filtros - Selecao Multipla

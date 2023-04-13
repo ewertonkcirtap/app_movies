@@ -77,7 +77,8 @@ def rating(x,url="https://imdb8.p.rapidapi.com/title/get-ratings"):
 if filtro1 and filtro2 and filme =="":
     csv = convert_df(df1)
     st.write('')
-    st.write(f"### *Dá um olhada nos {len(df1)} filmes que filtrei para você* :sunglasses:")
+    st.write(f"### *Dá um olhada nos {len(df1)} filmes que filtrei para você de acordo com a classificação do Imdb * :film_projector:")
+    st.write("# *Se desejar pode baixar a lista de filmes")
     bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download",convert_excel(df1))#Baixar em Excel
     st.write('')

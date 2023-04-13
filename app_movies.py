@@ -78,8 +78,7 @@ if filtro1 and filtro2 and filme =="":
     csv = convert_df(df1)
     st.write('')
     st.write(f"## *Dá um olhada nos {len(df1)} filmes que filtrei para você de acordo com a classificação do IMDb * :film_projector:")
-    st.write("### Baixar a lista de filmes")
-    bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
+    bt = st.download_button("Download lista",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download",convert_excel(df1))#Baixar em Excel
     st.write('')
     #st.dataframe(df1.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)

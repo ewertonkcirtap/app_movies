@@ -94,8 +94,8 @@ if filtro1 and filtro2 and filme =="":
 elif filtro2 and filme =="":
     csv = convert_df(df2)
     st.write('')
-    st.write(f"### *Dá um olhada nos {len(df2)} filmes que filtrei para você* :sunglasses:")
-    bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
+    st.write(f"### *Dá um olhada nos {len(df2)} filmes que filtrei para você de acordo com a classificação do IMDb * :film_projector:")
+    bt = st.download_button("Download lista",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download", convert_excel(df2))#Baixar em Excel
     st.write('')
     #st.dataframe(df2.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
@@ -110,8 +110,8 @@ elif filtro2 and filme =="":
 elif filtro1 and filme =="":
     csv = convert_df(df3)
     st.write('')
-    st.write(f"### *Dá um olhada nos {len(df3)} filmes que filtrei para você* :sunglasses:")
-    bt = st.download_button("Press to Download",csv,file_name='filmes_recomendados.csv')
+    st.write(f"### *Dá um olhada nos {len(df3)} filmes que filtrei para você de acordo com a classificação do IMDb * :film_projector:")
+    bt = st.download_button("Download lista",csv,file_name='filmes_recomendados.csv')
     #st.download_button("Press to Download",convert_excel(df3))#Baixar em Excel
     st.write('')
     #st.dataframe(df3.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)

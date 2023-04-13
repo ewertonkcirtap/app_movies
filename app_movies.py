@@ -19,7 +19,7 @@ df_genero = df["Genero"].drop_duplicates()
 st.set_page_config(
     page_title="movies",
     page_icon=":film_projector:",
-    layout="centered",
+    layout="wide", #centered
     initial_sidebar_state="expanded",
 )
 

@@ -146,7 +146,7 @@ elif filme:
 ### Layout Tela Inicial
 else:
     st.write('\n')
-    st.write("""### Vou te recomendar alguns filmes :film_projector:""")  # Titulo App
+    #st.write("""### Vou te recomendar alguns filmes :film_projector:""")  # Titulo App
     st.write('\n')
     st.image('https://pipocanamadrugada.com.br/site/wp-content/uploads/2016/09/melhores-filmes_pipoca-na-madrugada-.jpg')#Foto de capa
     st.write('\n')

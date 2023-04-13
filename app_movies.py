@@ -149,7 +149,7 @@ else:
     #st.write("""### Vou te recomendar alguns filmes :film_projector:""")  # Titulo App
     st.write('\n')
     #st.image('https://pipocanamadrugada.com.br/site/wp-content/uploads/2016/09/melhores-filmes_pipoca-na-madrugada-.jpg')#Foto de capa
-    st.image('https://3.bp.blogspot.com/-tvtI9qdqqqA/Wk66fQLJcQI/AAAAAAAAE6U/TOjlrtn3Bgkf3zzovLWKyaX6HnyY5-_CQCLcBGAs/s1600/melhores%2Bfilmes%2Bde%2B2017.jpg')#Foto de capa
+    st.image('https://blog.videoperola.com.br/wp-content/uploads/2022/04/top10-scaled.jpg')#Foto de capa
     st.write('\n')
     st.write('\n')
     st.write('\n')

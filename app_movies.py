@@ -184,11 +184,6 @@ elif filtro2 and filme == "":
 
 # Pesquisando filme
 elif filme:
-    
-    st.set_page_config(
-    layout="centered",  
-    initial_sidebar_state="auto",)
-    
     # if filme or filtro1 or filtro2:
     # st.write("""# Olha o que eu encontrei sobre a sua pesquisa""")
     filme = imdb(f=filme, u="https://imdb8.p.rapidapi.com/auto-complete")
@@ -199,13 +194,14 @@ elif filme:
     nota = rating(id)
 
     info = "https://www.imdb.com/title/" + id
-
-    st.image(filme['d'][0]['i']['imageUrl'])
-    st.write('\n')
+    
+    
     st.write("Filme: " + str(nomefilme))
     st.write("Nota Imdb: " + str(nota))
     st.write("Ano: " + str(anofilme))
     st.write(f"Mais informações : [Saiba mais]({info})")
+    st.write('\n')
+    st.image(filme['d'][0]['i']['imageUrl'])
 
 ### Layout Tela Inicial
 else:

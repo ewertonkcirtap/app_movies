@@ -1,5 +1,6 @@
 # Importando Bibliotecas
 import streamlit as st
+import streamlit_themes as stt
 import pandas as pd
 import requests
 

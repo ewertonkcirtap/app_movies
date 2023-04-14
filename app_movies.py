@@ -38,7 +38,6 @@ filtro3 = st.sidebar.slider("# Mínimo IMDb Rating ", 0.0, 10.0) # Rating
 st.sidebar.write('\n')
 st.sidebar.write('\n')
 st.sidebar.write('\n')
-st.sidebar.divider()
 
 ### Buscar por filme - IMDB
 st.sidebar.write("""## Você pode pesquisar por qualquer filme aqui :mag_right:""")
@@ -75,6 +74,7 @@ if filtro1 and filtro2 and filtro3 and filme == "":
     st.write('')
     st.write(f"### *Dá um olhada nos {len(df1)} filmes que filtrei para você de acordo com a classificação do IMDb * :film_projector:")
     bt = st.download_button("Download lista", csv, file_name='filmes_recomendados.csv')
+    st.divider()#
     # st.download_button("Press to Download",convert_excel(df1))#Baixar em Excel
     st.write('')
     # st.dataframe(df1.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)

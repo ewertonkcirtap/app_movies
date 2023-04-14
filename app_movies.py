@@ -38,7 +38,7 @@ filtro3 = st.sidebar.slider("# Mínimo IMDb Rating ", 0.0, 10.0) # Rating
 st.sidebar.write('\n')
 st.sidebar.write('\n')
 st.sidebar.write('\n')
-st.divider()
+st.sidebar.divider()
 
 ### Buscar por filme - IMDB
 st.sidebar.write("""## Você pode pesquisar por qualquer filme aqui :mag_right:""")

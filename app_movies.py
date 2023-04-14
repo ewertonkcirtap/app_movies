@@ -1,6 +1,6 @@
 # Importando Bibliotecas
 import streamlit as st
-import streamlit_themes as stt
+#import streamlit_themes as stt
 import pandas as pd
 import requests
 
@@ -14,7 +14,7 @@ df_pais = df["Pais"].drop_duplicates() #Lista de Países
 df_genero = df["Genero"].drop_duplicates() #Lista de Gêneros
 
 # Definindo Configurações da Página
-stt.set_theme('dark')
+#stt.set_theme('dark')
 st.set_page_config(
     page_title="movies",
     page_icon=":film_projector:",

@@ -18,6 +18,7 @@ st.set_page_config(
     page_icon=":film_projector:",
     layout="wide",  # centered
     initial_sidebar_state="expanded",
+    theme="dark",
 )
 
 # Layout

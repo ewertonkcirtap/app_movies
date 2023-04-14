@@ -32,12 +32,13 @@ st.sidebar.write('\n')
 
 filtro1 = st.sidebar.multiselect("# País", df_pais.sort_values()) # País
 filtro2 = st.sidebar.multiselect("# Gênero", df_genero.sort_values())  # Gênero
-filtro3 = st.sidebar.slider("# Mínimo IMDb Rating ", 0.0, 10.0) # Rating
+filtro3 = st.sidebar.slider("# Mínimo IMDb Rating ", 0.0, 10.0 (0.0,0.0)) # Rating
 #filtro2 = st.sidebar.multiselect("# Avaliação", ["Excelente", "Muito bom", "Bom"]) - removido na atualiação 12.04
 
 st.sidebar.write('\n')
 st.sidebar.write('\n')
 st.sidebar.write('\n')
+st.divider()
 
 ### Buscar por filme - IMDB
 st.sidebar.write("""## Você pode pesquisar por qualquer filme aqui :mag_right:""")

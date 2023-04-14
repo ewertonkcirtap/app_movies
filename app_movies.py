@@ -13,12 +13,12 @@ df_pais = df["Pais"].drop_duplicates() #Lista de Países
 df_genero = df["Genero"].drop_duplicates() #Lista de Gêneros
 
 # Definindo Configurações da Página
+st.set_theme("dark")
 st.set_page_config(
     page_title="movies",
     page_icon=":film_projector:",
     layout="wide",  # centered
     initial_sidebar_state="expanded",
-    theme="dark",
 )
 
 # Layout

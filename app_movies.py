@@ -20,7 +20,7 @@ st.set_page_config(
     layout="wide",  # centered
     initial_sidebar_state="expanded",
     
-    autor="Ewerton Nascimento,
+    autor="Ewerton Nascimento",
     url="https://www.linkedin.com/in/ewerton-nascimento-46aa0a100/",
     author_email="ewertonkcirtap3@gmail.com",
 )

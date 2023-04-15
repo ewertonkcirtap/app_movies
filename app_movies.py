@@ -19,6 +19,10 @@ st.set_page_config(
     page_icon=":film_projector:",
     layout="wide",  # centered
     initial_sidebar_state="expanded",
+    
+    autor="Ewerton Nascimento,
+    url="https://www.linkedin.com/in/ewerton-nascimento-46aa0a100/",
+    author_email="ewertonkcirtap3@gmail.com",
 )
 
 # Layout

@@ -1,7 +1,7 @@
 🚀 Introduction
 
-Desenvolvi a aplicação com o intuito de demonstrar de forma prática como é simples realizar a aplicação de 
-
+Aplicação desenvolvida com o intuito de recomendar lista de filmes de acordo com algums critérios.
+- Filtro de País, Gênero ou Rating IMdb
 
 
 💻 How to execute
@@ -15,3 +15,5 @@ Desenvolvi a aplicação com o intuito de demonstrar de forma prática como é s
 
 
 🌎 Deploy using Streamlit
+
+Ferramente altamente poderosa de fácil implementação

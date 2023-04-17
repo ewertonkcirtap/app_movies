@@ -6,10 +6,11 @@ import requests
 # Digite no terminal para executar o App -> streamlit run app_movies.py
 
 link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdcvSTtG8KKphzQ3h4i2Lyp8Osh0FLTqs59Sf4zhtSea9lmX7xm9-A1HPgsFnf77HabNfRwcyhEljU/pub?gid=0&single=true&output=csv"
-df = pd.read_csv(link).drop(columns=['Nota', 'Avaliacao'], axis=1)  # Excluindo Colunas
+df = pd.read_csv(link).drop(columns=['Avaliacao'], axis=1)#
 df = df.fillna("")  # Ajustando vazios
 df_pais = df["Pais"].drop_duplicates() # Lista de Países
 df_genero = df["Genero"].drop_duplicates() # Lista de Gêneros
+
 
 # Definindo Configurações da Página
 st.set_page_config(

@@ -6,8 +6,7 @@ Aplicação desenvolvida com o intuito de recomendar lista de filmes de acordo c
 
 💻 How to execute
 
-
-- Consultas em API. Utilizando 
+- Consultas em API. utilizando https://rapidapi.com/hub 
  
 - Utilizei o GitHub como repositório.
 
@@ -16,4 +15,4 @@ Aplicação desenvolvida com o intuito de recomendar lista de filmes de acordo c
 
 🌎 Deploy using Streamlit
 
-Ferramente altamente poderosa de fácil implementação
+Ferramenta altamente poderosa de fácil implementação

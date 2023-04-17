@@ -4,10 +4,10 @@ Aplicação desenvolvida com o intuito de recomendar lista de filmes ao usuário
 
 **Ficha Técnica:**
 
-- Front End : StreamLit
+- Front End : StreamLit (https://streamlit.io/)
 - Language : Python
 - Banco de dados : BigQuery
-- Repositório Github
+- Repositório : Github
 - API : https://rapidapi.com/hub
 
 
@@ -25,4 +25,4 @@ Aplicação desenvolvida com o intuito de recomendar lista de filmes ao usuário
 
 🌎 Deploy utilizando o Streamlit
 
-Ferramenta altamente poderosa de fácil implementação 
+Ferramenta altamente poderosa de fácil implementação focada em Data Web Apps

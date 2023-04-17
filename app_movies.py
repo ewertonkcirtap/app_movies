@@ -180,6 +180,7 @@ elif filme:
     id = filme['d'][0]['id']
     nomefilme = filme['d'][0]['l']
     anofilme = filme['d'][0]['y']
+    atores = filme['d'][0]['s']
     nota = rating(id)
 
     info = "https://www.imdb.com/title/" + id
@@ -188,6 +189,7 @@ elif filme:
     st.write("Filme: " + str(nomefilme))
     st.write("Nota Imdb: " + str(nota))
     st.write("Ano: " + str(anofilme))
+    st.write("Atores: " + str(atores))
     st.write(f"Mais informações : [Saiba mais]({info})")
     st.write('\n')
     st.image(filme['d'][0]['i']['imageUrl'])

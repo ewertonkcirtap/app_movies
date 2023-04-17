@@ -4,10 +4,10 @@ import pandas as pd
 import requests
 
 # Digite no terminal para executar o App -> streamlit run app_movies.py
+
 link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdcvSTtG8KKphzQ3h4i2Lyp8Osh0FLTqs59Sf4zhtSea9lmX7xm9-A1HPgsFnf77HabNfRwcyhEljU/pub?gid=0&single=true&output=csv"
 df = pd.read_csv(link).drop(columns=['Nota', 'Avaliacao'], axis=1)  # Excluindo Colunas
 df = df.fillna("")  # Ajustando vazios
-
 df_pais = df["Pais"].drop_duplicates() # Lista de Países
 df_genero = df["Genero"].drop_duplicates() # Lista de Gêneros
 
@@ -16,8 +16,7 @@ st.set_page_config(
     page_title="movies",
     page_icon=":film_projector:",
     layout="wide",  # centered
-    initial_sidebar_state="expanded",
-)
+    initial_sidebar_state="expanded",)
 
 # Layout
 st.sidebar.write('\n')
@@ -27,8 +26,9 @@ st.sidebar.write('\n')
 ### Definindo Filtros - Selecao Multipla
 filtro1 = st.sidebar.multiselect("# País", df_pais.sort_values()) # País
 filtro2 = st.sidebar.multiselect("# Gênero", df_genero.sort_values())  # Gênero
-filtro3 = st.sidebar.slider("# Mínimo IMDb Rating ", 0.0, 10.0) # Rating
 #filtro2 = st.sidebar.multiselect("# Avaliação", ["Excelente", "Muito bom", "Bom"]) - Removido na Atualiação 12.04
+filtro3 = st.sidebar.slider("# Mínimo IMDb Rating ", 0.0, 10.0) # Rating
+
 
 st.sidebar.write('\n')
 st.sidebar.write('\n')

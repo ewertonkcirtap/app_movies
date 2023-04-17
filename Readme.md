@@ -25,4 +25,4 @@ Aplicação desenvolvida com o intuito de recomendar lista de filmes ao usuário
 
 🌎 Deploy utilizando o Streamlit
 
-Ferramenta altamente poderosa de fácil implementação focada em Data Web Apps
+- Ferramenta altamente poderosa de fácil implementação focada em Data Apps

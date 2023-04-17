@@ -22,7 +22,6 @@ st.set_page_config(
 )
 
 # Layout
-st.sidebar.text("https://www.linkedin.com/in/ewerton-nascimento-46aa0a100/")
 #st.sidebar.text("""@ewertonkcirtap""")
 st.sidebar.write('\n')
 st.sidebar.write('\n')
@@ -38,11 +37,15 @@ filtro3 = st.sidebar.slider("# Mínimo IMDb Rating ", 0.0, 10.0) # Rating
 
 st.sidebar.write('\n')
 st.sidebar.write('\n')
-st.sidebar.write('\n')
 
 ### Buscar por filme - IMDB
 st.sidebar.write("""## Você pode pesquisar por qualquer filme aqui :mag_right:""")
 filme = st.sidebar.text_input('Insira o nome do filme')
+
+st.sidebar.write('\n')
+st.sidebar.write('## Contatos')
+st.sidebar.write(":man-pouting: Linkedin : [link](https://www.linkedin.com/in/ewerton-nascimento-46aa0a100/)")
+st.sidebar.write(":cloud: Repo : [link](https://github.com/ewertonkcirtap/app_movies)")
 
 
 # Funções

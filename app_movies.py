@@ -1,6 +1,5 @@
 # Importando Bibliotecas
 import streamlit as st
-#import streamlit_themes as stt
 import pandas as pd
 import requests
 
@@ -9,11 +8,10 @@ link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdcvSTtG8KKphzQ3h4i2Lyp
 df = pd.read_csv(link).drop(columns=['Nota', 'Avaliacao'], axis=1)  # Excluindo Colunas
 df = df.fillna("")  # Ajustando vazios
 
-df_pais = df["Pais"].drop_duplicates() #Lista de Países
-df_genero = df["Genero"].drop_duplicates() #Lista de Gêneros
+df_pais = df["Pais"].drop_duplicates() # Lista de Países
+df_genero = df["Genero"].drop_duplicates() # Lista de Gêneros
 
 # Definindo Configurações da Página
-#stt.set_theme('dark')
 st.set_page_config(
     page_title="movies",
     page_icon=":film_projector:",
@@ -22,8 +20,6 @@ st.set_page_config(
 )
 
 # Layout
-#st.sidebar.text("""@ewertonkcirtap""")
-st.sidebar.write('\n')
 st.sidebar.write('\n')
 st.sidebar.write("""## Que tal aplicar alguns filtros ? """)
 st.sidebar.write('\n')
@@ -32,7 +28,7 @@ st.sidebar.write('\n')
 filtro1 = st.sidebar.multiselect("# País", df_pais.sort_values()) # País
 filtro2 = st.sidebar.multiselect("# Gênero", df_genero.sort_values())  # Gênero
 filtro3 = st.sidebar.slider("# Mínimo IMDb Rating ", 0.0, 10.0) # Rating
-#filtro2 = st.sidebar.multiselect("# Avaliação", ["Excelente", "Muito bom", "Bom"]) - removido na atualiação 12.04
+#filtro2 = st.sidebar.multiselect("# Avaliação", ["Excelente", "Muito bom", "Bom"]) - Removido na Atualiação 12.04
 
 st.sidebar.write('\n')
 st.sidebar.write('\n')
@@ -68,7 +64,6 @@ def rating(x, url="https://imdb8.p.rapidapi.com/title/get-ratings"):
 
 
 # Exibir DataFrame de Acordo com os Filtros Aplicados:
-
 # Filtro : Pais, Gênero e Rating
 if filtro1 and filtro2 and filtro3 and filme == "":
     df1 = (df[(df['IMDb Rating'] >= filtro3) & df['Pais'].isin(filtro1) & df['Genero'].isin(filtro2)])
@@ -76,11 +71,7 @@ if filtro1 and filtro2 and filtro3 and filme == "":
     st.write('')
     st.write(f"### *Dá um olhada nos {len(df1)} filmes que filtrei para você de acordo com a classificação do IMDb * :film_projector:")
     bt = st.download_button("Download lista", csv, file_name='filmes_recomendados.csv')
-    # st.download_button("Press to Download",convert_excel(df1))#Baixar em Excel
     st.write('')
-    # st.dataframe(df1.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
-    # st.table(df1.sort_values(by=['IMDb Rating'],ascending=False).reset_index(drop=True))
-
     df1 = df1.sort_values(by=['IMDb Rating'], ascending=False).reset_index(drop=True)
     df1.index = df1.index + 1
     st.table(df1)
@@ -171,11 +162,7 @@ elif filtro2 and filme == "":
     st.write(
         f"### *Dá um olhada nos {len(df6)} filmes que filtrei para você de acordo com a classificação do IMDb * :film_projector:")
     bt = st.download_button("Download lista", csv, file_name='filmes_recomendados.csv')
-    # st.download_button("Press to Download",convert_excel(df3))#Baixar em Excel
     st.write('')
-    # st.dataframe(df3.sort_values(by=['Filme']).reset_index(drop=True), width=2800, height=400)
-    # st.table(df3.sort_values(by=['IMDb Rating'],ascending=False).reset_index(drop=True))
-
     df6 = df6.sort_values(by=['IMDb Rating'], ascending=False).reset_index(drop=True)
     df6.index = df6.index + 1
     st.table(df6)
@@ -186,7 +173,7 @@ elif filtro2 and filme == "":
 
 # Pesquisando filme
 elif filme:
-    # if filme or filtro1 or filtro2:
+
     # st.write("""# Olha o que eu encontrei sobre a sua pesquisa""")
     filme = imdb(f=filme, u="https://imdb8.p.rapidapi.com/auto-complete")
 
@@ -209,8 +196,6 @@ elif filme:
 else:
     st.write('\n')
     # st.write("""### Vou te recomendar alguns filmes :film_projector:""")  # Titulo App
-    st.write('\n')
-    # st.image('https://pipocanamadrugada.com.br/site/wp-content/uploads/2016/09/melhores-filmes_pipoca-na-madrugada-.jpg')#Foto de capa
     st.image('https://blog.videoperola.com.br/wp-content/uploads/2022/04/top10-scaled.jpg')  # Foto de capa
     st.write('\n')
     st.write('\n')

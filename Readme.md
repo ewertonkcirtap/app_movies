@@ -12,6 +12,7 @@ Aplicação desenvolvida com o intuito de recomendar lista de filmes ao usuário
 
 
 
+
 💻 Etapas de Desenvolvimento
 
 - Construção de um Banco de Dados com os Filmes (BigQuery/Google Sheets).
@@ -21,6 +22,8 @@ Aplicação desenvolvida com o intuito de recomendar lista de filmes ao usuário
 - Desenvolvimento do Layout da Aplicação.
 - Implantação de uma API para realizar as buscas dos filmes.
 - Construção do repositótrio no Github e Deploy da Aplicação.
+
+
 
 
 🌎 Deploy utilizando o Streamlit

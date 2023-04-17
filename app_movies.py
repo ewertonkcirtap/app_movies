@@ -22,7 +22,8 @@ st.set_page_config(
 )
 
 # Layout
-st.sidebar.text("""@ewertonkcirtap""")
+st.sidebar.text("https://www.linkedin.com/in/ewerton-nascimento-46aa0a100/")
+#st.sidebar.text("""@ewertonkcirtap""")
 st.sidebar.write('\n')
 st.sidebar.write('\n')
 st.sidebar.write("""## Que tal aplicar alguns filtros para sugerir filmes à você.""")
@@ -218,7 +219,7 @@ else:
 
     if check:
         with st.form("my_form"):
-            st.write("Para registrar seu voto vou precisar que preencha os dados abaixo, tudo bem ?")
+            st.write("Favor preencher os dados abaixo")
             nome = st.text_input("Nome")
             email = st.text_input("E-mail")
             submitted = st.form_submit_button("Confirmar")

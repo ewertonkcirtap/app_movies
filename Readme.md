@@ -1,18 +1,28 @@
-🚀 Introduction
+🚀 Introdução
 
-Aplicação desenvolvida com o intuito de recomendar lista de filmes de acordo com algums critérios.
-- Filtro de País, Gênero ou Rating IMdb
+Aplicação desenvolvida com o intuito de recomendar lista de filmes ao usuário de acordo com algums critérios (País, Gênero e Avaliação)
 
+**Ficha Técnica:**
 
-💻 How to execute
-
-- Consultas em API. utilizando https://rapidapi.com/hub 
- 
-- Utilizei o GitHub como repositório.
-
-- Desenvolvimento do Data Web App através de ferramenta Streamlit.
+- Front End : StreamLit
+- Language : Python
+- Banco de dados : BigQuery
+- Repositório Github
+- API : https://rapidapi.com/hub
 
 
-🌎 Deploy using Streamlit
 
-Ferramenta altamente poderosa de fácil implementação
+💻 Etapas de Desenvolvimento
+
+- Construção de um Banco de Dados com os Filmes (BigQuery/Google Sheets).
+- Construção do Ambiente virtual para o desenvolvimento da Aplicação.
+- Teste de conexão com o Banco de Dados.
+- Processamento e tratamento dos Dados.
+- Desenvolvimento do Layout da Aplicação.
+- Implantação de uma API para realizar as buscas dos filmes.
+- Construção do repositótrio no Github e Deploy da Aplicação.
+
+
+🌎 Deploy utilizando o Streamlit
+
+Ferramenta altamente poderosa de fácil implementação 

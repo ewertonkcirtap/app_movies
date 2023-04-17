@@ -13,7 +13,7 @@ Aplicação desenvolvida com o intuito de recomendar lista de filmes ao usuário
 
 
 
-💻 Etapas de Desenvolvimento
+💻 Etapas do Desenvolvimento
 
 - Construção de um Banco de Dados com os Filmes (BigQuery/Google Sheets).
 - Construção do Ambiente virtual para o desenvolvimento da Aplicação.

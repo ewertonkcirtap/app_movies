@@ -205,7 +205,7 @@ else:
 
     if check:
         with st.form("my_form"):
-            st.write("Favor preencher os dados abaixo")
+            st.write("Favor preencher os dados abaixo.")
             nome = st.text_input("Nome")
             email = st.text_input("E-mail")
             submitted = st.form_submit_button("Confirmar")

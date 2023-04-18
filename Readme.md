@@ -30,8 +30,8 @@ Aplicação desenvolvida com o intuito de recomendar lista de filmes ao usuário
 
 - O Streamlit é uma ferramenta open source desenvolvida em Python que permite a criação de aplicativos web interativos para visualização de dados e machine learning. Com o Streamlit, é possível criar rapidamente interfaces de usuário para análise de dados e prototipagem de modelos de machine learning.
 
-O Streamlit é uma ferramenta bastante popular e tem uma grande comunidade de desenvolvedores contribuindo com pacotes e soluções para facilitar ainda mais a criação de aplicativos. Além disso, o Streamlit é muito fácil de aprender e usar, pois é baseado em código Python simples e limpo, permitindo que desenvolvedores iniciantes criem rapidamente aplicativos funcionais.
+- O Streamlit é uma ferramenta bastante popular e tem uma grande comunidade de desenvolvedores contribuindo com pacotes e soluções para facilitar ainda mais a criação de aplicativos. Além disso, o Streamlit é muito fácil de aprender e usar, pois é baseado em código Python simples e limpo, permitindo que desenvolvedores iniciantes criem rapidamente aplicativos funcionais.
 
-O Streamlit é capaz de integrar-se a bibliotecas de visualização de dados, como Matplotlib e Plotly, permitindo criar gráficos e visualizações de dados interativos em tempo real. Também permite criar páginas dinâmicas que atualizam automaticamente quando os dados mudam ou são atualizados.
+- O Streamlit é capaz de integrar-se a bibliotecas de visualização de dados, como Matplotlib e Plotly, permitindo criar gráficos e visualizações de dados interativos em tempo real. Também permite criar páginas dinâmicas que atualizam automaticamente quando os dados mudam ou são atualizados.
 
-Por essas razões, o Streamlit é uma ótima escolha para quem quer construir uma aplicação web para compartilhar informações, visualizar dados ou criar protótipos de modelos de machine learning.
+- Por essas razões, o Streamlit é uma ótima escolha para quem quer construir uma aplicação web para compartilhar informações, visualizar dados ou criar protótipos de modelos de machine learning.

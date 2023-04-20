@@ -6,7 +6,7 @@ import requests
 # Digite no terminal para executar o App -> streamlit run app_movies.py
 
 link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdcvSTtG8KKphzQ3h4i2Lyp8Osh0FLTqs59Sf4zhtSea9lmX7xm9-A1HPgsFnf77HabNfRwcyhEljU/pub?gid=0&single=true&output=csv"
-df = pd.read_csv(link, decimal='.').drop(columns=['Avaliacao'], axis=1)#
+df = pd.read_csv(link).drop(columns=['Avaliacao'], axis=1)#
 df = df.fillna("")  # Ajustando vazios
 df_pais = df["Pais"].drop_duplicates() # Lista de Países
 df_genero = df["Genero"].drop_duplicates() # Lista de Gêneros
@@ -135,7 +135,6 @@ elif filtro3 and filme == "":
     st.write('')
     df4 = df4.sort_values(by=['IMDb Rating'], ascending=False).reset_index(drop=True)
     df4.index = df4.index + 1
-    df4 = df4.arroun(2) ##########
     st.table(df4)
     
     if bt:

@@ -135,6 +135,7 @@ elif filtro3 and filme == "":
     st.write('')
     df4 = df4.sort_values(by=['IMDb Rating'], ascending=False).reset_index(drop=True)
     df4.index = df4.index + 1
+    df4 = df4.arroun(2) ##########
     st.table(df4)
     
     if bt:

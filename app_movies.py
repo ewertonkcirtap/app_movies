@@ -5,7 +5,9 @@ import requests
 
 # Digite no terminal para executar o App -> streamlit run app_movies.py
 
-link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdcvSTtG8KKphzQ3h4i2Lyp8Osh0FLTqs59Sf4zhtSea9lmX7xm9-A1HPgsFnf77HabNfRwcyhEljU/pub?gid=0&single=true&output=csv"
+#link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdcvSTtG8KKphzQ3h4i2Lyp8Osh0FLTqs59Sf4zhtSea9lmX7xm9-A1HPgsFnf77HabNfRwcyhEljU/pub?gid=0&single=true&output=csv"
+link = "https://raw.githubusercontent.com/ewertonkcirtap/dataset/main/list_movies.csv"
+
 df = pd.read_csv(link).drop(columns=['Avaliacao'], axis=1)#
 df = df.fillna("")  # Ajustando vazios
 df_pais = df["Pais"].drop_duplicates() # Lista de Países

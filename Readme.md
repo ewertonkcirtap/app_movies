@@ -1,6 +1,6 @@
 🚀 Introdução
 
-Aplicação desenvolvida com o intuito de recomendar lista de filmes ao usuário de acordo com algums critérios (País, Gênero e Avaliação)
+Aplicação desenvolvida com o intuito de recomendar lista de filmes ao usuário de acordo com alguns critérios (País, Gênero e Avaliação)
 
 **Ficha Técnica:**
 

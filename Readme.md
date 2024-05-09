@@ -2,7 +2,9 @@
 
 Aplicação desenvolvida com o intuito de recomendar lista de filmes ao usuário de acordo com alguns critérios (País, Gênero e Avaliação)
 
+
 Streamlit : https://ewertonkcirtap-app-movies-app-movies-xnieg7.streamlit.app/
+
 
 **Ficha Técnica:**
 
